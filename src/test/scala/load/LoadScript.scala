@@ -17,9 +17,9 @@ class LoadScript extends Simulation{
     exec(BasicLoad.start)
   }
   setUp(
-    basicLoad.inject(rampUsers(10) over (20 seconds))
+    basicLoad.inject(rampUsers(1000) over (20 minutes))
       .protocols(httpConf))
-    .maxDuration(21 seconds)
+    .maxDuration(21 minutes)
 
 }
 
